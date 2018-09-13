@@ -16,6 +16,14 @@ Then generate your new project:
 yo typescript-module
 ```
 
+## Features
+* Testing with Jest
+* Linting out of the box (checks the style of your code), with TSLint
+* Build, prepublish and other scripts to help you to develop
+* Works with Typescript: Static typing for your JS Applications, reducing amount of runtime errors
+* Coverage out of the box, thanks to Jest
+* Uses deterministic module resolving, with Yarn
+
 ## Updating template code
 This module pulls the code from the Typescript Module Generator repo (https://github.com/owsas/typescript-module-template). Please,
 do not update the code in `generators/app/typescript-module-template` directly. Instead, run 
