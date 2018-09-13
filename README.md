@@ -1,5 +1,5 @@
 # generator-typescript-module [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Generator for typescript modules ready to be published to npm
+> Generator for Typescript modules ready to be published to npm. This generator creates you a Typescript module, as it is specified in https://github.com/owsas/typescript-module-template
 
 ## Installation
 
