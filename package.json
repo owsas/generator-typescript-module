@@ -70,7 +70,8 @@
           "singleQuote": true,
           "printWidth": 90
         }
-      ]
+      ],
+      "capitalized-comments": 0
     },
     "plugins": [
       "prettier"
