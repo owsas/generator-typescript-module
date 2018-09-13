@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Juan Camilo Guarín Peñaranda",
+      "authorEmail": "jcguarinpenaranda@gmail.com",
+      "authorUrl": "http://owsas.com"
+    }
+  }
+}

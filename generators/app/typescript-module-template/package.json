@@ -1,0 +1,54 @@
+{
+  "name": "typescript-module-template",
+  "version": "1.0.1",
+  "description": "A typescript boilerplate to publish modules to npm",
+  "main": "out/index.js",
+  "types": "out/index.d.ts",
+  "scripts": {
+    "test": "jest --ci --silent",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [],
+  "author": "Juan Camilo Guarín P",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {},
+  "jest": {
+    "roots": [
+      "<rootDir>/src",
+      "<rootDir>/test"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/out"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owsas/typescript-module-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/owsas/typescript-module-template/issues"
+  },
+  "homepage": "https://github.com/owsas/typescript-module-template#readme"
+}
