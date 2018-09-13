@@ -1,5 +1,18 @@
 # <%= name %>
 
+<%= description %>
+
+## Install
+```sh
+npm install --save <%= name %>
+```
+
+## Usage
+```js
+// const module = require('<%= name %>');
+// import module from '<%= name %>';
+```
+
 ## Dev Features
 * Testing with Jest
 * Linting out of the box (checks the style of your code), with TSLint
