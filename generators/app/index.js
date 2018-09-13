@@ -14,10 +14,10 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
-        default: true
+        type: 'input',
+        name: 'name',
+        message: 'Your project name',
+        default: this.appname // Default to current folder name
       }
     ];
 
@@ -42,6 +42,19 @@ module.exports = class extends Generator {
       path.join(__dirname, 'typescript-module-template', '.vscode', 'settings.json'),
       this.destinationPath('.vscode/settings.json')
     );
+
+    // Create the Readme
+    this.fs.copyTpl(
+      path.join(__dirname, 'templates', 'README.md'),
+      this.destinationPath('README.md'),
+      { name: this.props.name }
+    );
+
+    // Change package json name
+    const packageJSON = this.fs.readJSON('package.json');
+    packageJSON.name = this.props.name;
+    packageJSON.version = '0.0.1';
+    this.fs.writeJSON('package.json', packageJSON, null, 2);
   }
 
   install() {
