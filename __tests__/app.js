@@ -3,10 +3,13 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
+const description = 'Test Package Description';
+
 describe('generator-typescript-module:app', () => {
   beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
-      name: 'test-package'
+      name: 'test-package',
+      description
     });
   });
 
@@ -32,7 +35,15 @@ describe('generator-typescript-module:app', () => {
     assert.jsonFileContent('package.json', { version: '0.0.1' });
   });
 
+  it('changes the package.json description', () => {
+    assert.jsonFileContent('package.json', { description });
+  });
+
   it('sets the README name', () => {
     assert.fileContent('README.md', '# test-package');
+  });
+
+  it('sets the README description', () => {
+    assert.fileContent('README.md', description);
   });
 });

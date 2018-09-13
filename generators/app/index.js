@@ -18,6 +18,12 @@ module.exports = class extends Generator {
         name: 'name',
         message: 'Your project name',
         default: this.appname // Default to current folder name
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Description',
+        default: ''
       }
     ];
 
@@ -47,12 +53,13 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       path.join(__dirname, 'templates', 'README.md'),
       this.destinationPath('README.md'),
-      { name: this.props.name }
+      { name: this.props.name, description: this.props.description }
     );
 
     // Change package json name
     const packageJSON = this.fs.readJSON('package.json');
     packageJSON.name = this.props.name;
+    packageJSON.description = this.props.description;
     packageJSON.version = '0.0.1';
     this.fs.writeJSON('package.json', packageJSON, null, 2);
   }
