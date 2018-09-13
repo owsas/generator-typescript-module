@@ -5,7 +5,9 @@ const helpers = require('yeoman-test');
 
 describe('generator-typescript-module:app', () => {
   beforeAll(() => {
-    return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({});
+    return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
+      name: 'test-package'
+    });
   });
 
   it('creates files', () => {
@@ -20,5 +22,13 @@ describe('generator-typescript-module:app', () => {
   it('creates private files', () => {
     assert.file(['.gitignore']);
     assert.file(['.vscode/settings.json']);
+  });
+
+  it('changes the package.json name', () => {
+    assert.fileContent('package.json', /test-package/);
+  });
+
+  it('sets the README name', () => {
+    assert.fileContent('README.md', /test-package/);
   });
 });
