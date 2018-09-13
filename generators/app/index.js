@@ -24,6 +24,12 @@ module.exports = class extends Generator {
         name: 'description',
         message: 'Description',
         default: ''
+      },
+      {
+        type: 'input',
+        name: 'author',
+        message: 'Author',
+        default: ''
       }
     ];
 
@@ -60,6 +66,7 @@ module.exports = class extends Generator {
     const packageJSON = this.fs.readJSON('package.json');
     packageJSON.name = this.props.name;
     packageJSON.description = this.props.description;
+    packageJSON.author = this.props.author;
     packageJSON.version = '0.0.1';
     this.fs.writeJSON('package.json', packageJSON, null, 2);
   }
