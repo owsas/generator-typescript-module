@@ -32,6 +32,16 @@ module.exports = class extends Generator {
       path.join(__dirname, 'typescript-module-template'),
       this.destinationPath('.')
     );
+
+    this.fs.copy(
+      path.join(__dirname, 'typescript-module-template', '.gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
+    this.fs.copy(
+      path.join(__dirname, 'typescript-module-template', '.vscode', 'settings.json'),
+      this.destinationPath('.vscode/settings.json')
+    );
   }
 
   install() {
