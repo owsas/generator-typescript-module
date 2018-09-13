@@ -16,6 +16,16 @@ Then generate your new project:
 yo typescript-module
 ```
 
+## Updating template code
+This module pulls the code from the Typescript Module Generator repo (https://github.com/owsas/typescript-module-template). Please,
+do not update the code in `generators/app/typescript-module-template` directly. Instead, run 
+
+```bash
+sh sh/clone.sh
+```
+
+This will clone the `typescript-module-template` repository and update the code in `generators/app/typescript-module-template`
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
