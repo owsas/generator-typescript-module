@@ -25,10 +25,14 @@ describe('generator-typescript-module:app', () => {
   });
 
   it('changes the package.json name', () => {
-    assert.fileContent('package.json', /test-package/);
+    assert.jsonFileContent('package.json', { name: 'test-package' });
+  });
+
+  it('changes the package.json version', () => {
+    assert.jsonFileContent('package.json', { version: '0.0.1' });
   });
 
   it('sets the README name', () => {
-    assert.fileContent('README.md', /test-package/);
+    assert.fileContent('README.md', '# test-package');
   });
 });
