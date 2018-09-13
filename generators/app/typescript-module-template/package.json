@@ -1,6 +1,6 @@
 {
   "name": "typescript-module-template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A typescript boilerplate to publish modules to npm",
   "main": "out/index.js",
   "types": "out/index.d.ts",
