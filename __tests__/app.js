@@ -9,7 +9,7 @@ describe('generator-typescript-module:app', () => {
   });
 
   it('creates files', () => {
-    assert.file(['yarn.lock']);
+    assert.file(['package-lock.lock']);
     assert.file(['package.json']);
     assert.file(['src/index.ts']);
     assert.file(['test/index.test.ts']);
