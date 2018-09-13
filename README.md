@@ -1,5 +1,5 @@
 # generator-typescript-module [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Generator for typescript modules
+> Generator for typescript modules ready to be published to npm
 
 ## Installation
 
