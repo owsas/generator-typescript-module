@@ -9,12 +9,16 @@ describe('generator-typescript-module:app', () => {
   });
 
   it('creates files', () => {
-    // A assert.file(['.gitignore']);
     assert.file(['yarn.lock']);
     assert.file(['package.json']);
     assert.file(['src/index.ts']);
     assert.file(['test/index.test.ts']);
     assert.file(['tsconfig.json']);
     assert.file(['tslint.json']);
+  });
+
+  it('creates private files', () => {
+    assert.file(['.gitignore']);
+    assert.file(['.vscode/settings.json']);
   });
 });
