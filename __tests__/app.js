@@ -4,10 +4,12 @@ const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
 const description = 'Test Package Description';
+const author = 'Test author';
 
 describe('generator-typescript-module:app', () => {
   beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
+      author,
       name: 'test-package',
       description
     });
@@ -25,6 +27,10 @@ describe('generator-typescript-module:app', () => {
   it('creates private files', () => {
     assert.file(['.gitignore']);
     assert.file(['.vscode/settings.json']);
+  });
+
+  it('changes the package.json author', () => {
+    assert.jsonFileContent('package.json', { author });
   });
 
   it('changes the package.json name', () => {
