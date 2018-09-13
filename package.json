@@ -2,7 +2,6 @@
   "name": "generator-typescript-module",
   "version": "0.0.6",
   "description": "Generator for typescript modules",
-  "homepage": "",
   "author": {
     "name": "Juan Camilo Guarín Peñaranda",
     "email": "jcguarinpenaranda@gmail.com",
