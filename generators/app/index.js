@@ -46,7 +46,7 @@ module.exports = class extends Generator {
     );
 
     this.fs.copy(
-      path.join(__dirname, 'typescript-module-template', '.gitignore'),
+      path.join(__dirname, 'typescript-module-template', 'gitignore'),
       this.destinationPath('.gitignore')
     );
 
