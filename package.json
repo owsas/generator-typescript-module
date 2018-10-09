@@ -1,6 +1,6 @@
 {
   "name": "generator-typescript-module",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Generator for typescript modules",
   "author": {
     "name": "Juan Camilo Guarín Peñaranda",
