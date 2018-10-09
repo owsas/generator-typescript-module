@@ -79,7 +79,7 @@
   "scripts": {
     "pretest": "eslint .",
     "precommit": "lint-staged",
-    "test": "jest"
+    "test": "jest --ci --maxWorkers=2"
   },
   "repository": "owsas/generator-typescript-module",
   "license": "MIT"
