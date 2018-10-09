@@ -1,8 +1,8 @@
 # Typescript module template
 
-A typescript boilerplate to publish modules to npm
+A typescript boilerplate to publish modules to npm. Also available as a `yeoman` generator, here: https://github.com/owsas/generator-typescript-module
 
-## Usage
+## Dev mode
 
 Clone this repo, and start adding your code in the `index.ts` file.  
 When you are done, write the tests in the `index.test.ts` file. For testing, this repo works with [Jest](https://facebook.github.io/jest/).
@@ -12,13 +12,13 @@ and send it to npm.
 
 Make sure to change the name of the package in `package.json`
 
-## Features
+## Dev Features
 * Testing with Jest
 * Linting out of the box (checks the style of your code), with TSLint
 * Build, prepublish and other scripts to help you to develop
 * Works with Typescript: Static typing for your JS Applications, reducing amount of runtime errors
 * Coverage out of the box, thanks to Jest
-* Uses deterministic module resolving, with Yarn
+* Uses deterministic module resolving, with `package-lock.json`
 
 ## Credits
 
